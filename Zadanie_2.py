@@ -12,11 +12,11 @@ def cylinder(r, h, full=True):
     if full:
         return s_bor_cylinder + 2 * circle(r)
     else:
-        print(s_bor_cylinder)
+        return s_bor_cylinder
 
 if __name__ == '__main__':
     r = float(input("Введите радиус: "))
     h = float(input("Введите высоту: "))
-    c = input("side or full?")
-    s = cylinder(r, h, full=c)
+    c = input("s_bor_cylinder or full?")
+    s = cylinder(r, h, full=(c == 'full'))
     print(s)
